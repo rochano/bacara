@@ -1,0 +1,123 @@
+@font-face {
+  font-family: SukhumvitSet-Thin;
+  src: url(/assets/fonts/SukhumvitSet-Thin.woff);
+}
+@font-face {
+  font-family: SukhumvitSet-Medium;
+  src: url(/assets/fonts/SukhumvitSet-Medium.woff);
+}
+@font-face {
+  font-family: SukhumvitSet-Bold;
+  src: url(/assets/fonts/SukhumvitSet-Bold.woff);
+}
+body {
+  width: 100%; 
+  margin: 0px; font-family: SukhumvitSet-Medium; 
+  -webkit-user-select: none; -moz-user-select: none; 
+  -ms-user-select: none; user-select: none; 
+  position: relative; 
+  z-index: 0;
+  }
+
+
+.main { width: 1000px; min-width: 1000px; height: 768px; margin: 0 auto; position: relative; z-index: 2;}
+
+
+/*
+#fbPanel_notlogin { width: 100%; height: 120px; position: absolute; float: left; background: rgb(0,0,0,0.8); z-index: 99; display: block; border-radius: 10px;}
+#fbPanel_notlogin .bt_FBconnect { width: 254px; height: 49px; margin: 20px 0 0 calc(50% - 125px); float: left; background: url("img/facebook_connect.png"); cursor: pointer;}
+#fbPanel_notlogin .bt_FBconnect:hover { background: url("img/facebook_connect_hover.png");}
+#fbPanel_notlogin .bt_FBconnect:active { position: relative; top: 2px;}
+#fbPanel_notlogin .fb_textdes { width: 100%; height: 25px; margin: 10px 0 0 0; float: left; font-size: 11px; color: #2077d0; text-align: center;}*/
+
+#fbPanel_login { width: 270px; height: 50px; border: 1px solid #01223a; background: url("/assets/images/fb_panel.png");
+  position: relative; top: -1px; float: left; overflow: hidden;
+  border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;
+}
+#fbPanel_login .user_pic { width: 40px; height: 40px; border-radius: 10px; position: absolute; margin: 2px 0 0 10px; border: 1px solid #145a8c; float: left; background: #000; text-align: center; overflow: hidden;}
+#fbPanel_login .user_pic img { width: 100%; height: auto;}
+#fbPanel_login .user_pic_fb { width: 21px; height: 21px; background: url("/assets/images/icon_fb.png"); position: absolute; right: -4px; bottom: -4px;  float: left;}
+#fbPanel_login .user_fb { width: 100%; height: 25px; float: left;}
+#fbPanel_login .user_name { width: 180px; height: 25px; line-height: 25px; margin: 0 0 0 60px; font-size: 16px; color: #fff; float: left; overflow: hidden;}
+
+#fbPanel_login .user_panel { width: 100%; height: 30px; float: left;}
+#fbPanel_login .user_credit_icon { width: 30px; height: 29px; background: url("/assets/images/icon_chip.png"); position: absolute; left: 62px; margin: -1px 0 0 0; float: left;}
+#fbPanel_login .user_credit { width: 168px; height: 19px; line-height: 19px; font-size: 10px; color: #a5a5a5; margin: 4px 0 0 60px; background: url("/assets/imgaes/fbLogin_creditBG.png") no-repeat; position: relative; float: left;}
+#fbPanel_login #credit { min-width: 100px; height: 25px; margin: 0 0 0 35px; font-family: SukhumvitSet-Bold; font-size: 14px; color: #e19105; font-style: bold; float: left;}
+#fbPanel_login .bt_refill { width: 18px; height: 18px; background: url("/assets/images/icon_addCredit.png"); position: absolute;
+  right: 60px; margin: 4px 0 0 0; float: left; cursor: pointer;}
+#fbPanel_login .bt_refill:hover { background: url("/assets/images/icon_addCredit_hover.png");}
+#fbPanel_login .bt_refill:active { margin: 6px 0 0 0;}
+#fbPanel_login .bt_logout { width: 59px; height: 59px; background: url("/assets/images/icon_logout.png");
+ position: absolute; top: -3px; right: 0; float: left; cursor: pointer;}
+#fbPanel_login .bt_logout:hover { background: url("/assets/images/icon_logout_hover.png");}
+#fbPanel_login .bt_logout:active { }
+
+
+.table { width: 800px; height: 254px; margin: 10px 0 0 10px; float: left; overflow: hidden;}
+
+.table_body { width: 100%; height: 250px; margin: 0; background: #282828; float: left; overflow: hidden;}
+.table_body table { padding: 0px; margin: 0px;}
+.table_body table tr { padding: 0px; margin: 0px;}
+.table_body table td { width: 25px; height: 25px; background: #111;}
+.table_body table td:hover { background: #222;}
+.table_body table #table_chips_player { width: 20px; height: 20px; border-radius: 10px; margin: 1px 0 0 2px; background: url("/assets/images/table_chips_player.png");}
+.table_body table #table_chips_tie { width: 20px; height: 20px; border-radius: 10px; margin: 1px 0 0 2px; background: url("/assets/images/table_chips_tie.png");}
+.table_body table #table_chips_banker { width: 20px; height: 20px; border-radius: 10px; margin: 1px 0 0 2px; background: url("/assets/images/table_chips_banker.png");}
+
+
+#main_body_col1_player {}
+#main_body_col1_tie {}
+#main_body_col1_banker {}
+
+#main_body_col1_player, .playerActive { 
+  animation: fadePlayer 2s ease-in-out infinite; float: left; 
+  width: 134px;
+  height: 118px;
+  position: absolute;
+  border-radius: 100%;
+  left: 0;
+  top: 0;
+  background-image: url(/assets/images/table_player.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+}
+
+#main_body_col1_banker, .bankerActive { 
+  animation: fadeBanker 2s ease-in-out infinite; 
+  width: 134px;
+  height: 118px;
+  position: absolute;
+  border-radius: 100%;
+  left: 331px;
+  top: 2px;
+  background-image: url(/assets/images/table_banker.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+}
+
+ .player { color: #0098ba;}
+ .playerBG { background: #0098ba;}
+ .banker { color: #be0a0e;}
+ .bankerBG { background: #be0a0e;}
+ .tie { color: #009d6b;}
+ .tieBG { background: #009d6b;}
+
+ #result_player {
+  position: absolute;
+  left: 142px;
+  top: 48px;
+  color: #ffffff;
+  font-size: 20px;
+ }
+
+#result_banker {
+  position: absolute;
+  border-radius: 100%;
+  left: 267px;
+  top: 47px;
+  color: #ffffff;
+  font-size: 20px;
+ }
